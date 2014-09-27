@@ -25,7 +25,6 @@
 		C91C0D6419D6039C00BADB93 /* business.png in Resources */ = {isa = PBXBuildFile; fileRef = C91C0D5E19D6039B00BADB93 /* business.png */; };
 		C91C0D6B19D60FE900BADB93 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91C0D6A19D60FE900BADB93 /* LoginModel.swift */; };
 		C923200619D54B9800FEA745 /* VideoProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = C923200519D54B9800FEA745 /* VideoProperties.plist */; };
-		C923200819D54C5200FEA745 /* ball-soccer.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C923200719D54C5200FEA745 /* ball-soccer.rtf */; };
 		C9D611B019D40C720021E89A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D611AF19D40C720021E89A /* AppDelegate.swift */; };
 		C9D611B219D40C720021E89A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D611B119D40C720021E89A /* LoginViewController.swift */; };
 		C9D611B519D40C720021E89A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D611B319D40C720021E89A /* Main.storyboard */; };
@@ -68,7 +67,6 @@
 		C91C0D5E19D6039B00BADB93 /* business.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = business.png; sourceTree = "<group>"; };
 		C91C0D6A19D60FE900BADB93 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		C923200519D54B9800FEA745 /* VideoProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = VideoProperties.plist; sourceTree = "<group>"; };
-		C923200719D54C5200FEA745 /* ball-soccer.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "ball-soccer.rtf"; sourceTree = "<group>"; };
 		C9D611AA19D40C720021E89A /* MGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D611AE19D40C720021E89A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9D611AF19D40C720021E89A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 			children = (
 				C9D611AE19D40C720021E89A /* Info.plist */,
 				C923200519D54B9800FEA745 /* VideoProperties.plist */,
-				C923200719D54C5200FEA745 /* ball-soccer.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -365,7 +362,6 @@
 				C91C0D4619D59F7800BADB93 /* Video.png in Resources */,
 				C91C0D6319D6039C00BADB93 /* studies.png in Resources */,
 				C91C0D6219D6039C00BADB93 /* family.png in Resources */,
-				C923200819D54C5200FEA745 /* ball-soccer.rtf in Resources */,
 				C923200619D54B9800FEA745 /* VideoProperties.plist in Resources */,
 				C91C0D5319D5EAF000BADB93 /* toystory.mp4 in Resources */,
 				C91C0D5819D5FC7E00BADB93 /* sample.m4v in Resources */,
