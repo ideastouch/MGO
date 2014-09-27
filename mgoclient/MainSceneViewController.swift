@@ -75,9 +75,7 @@ class MainSceneViewController: UIViewController {
     
     
     @IBAction func logOutAction(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {
-            
-        })
+        self.dismissViewControllerAnimated(true, completion:nil)
     }
     
     func performSegueWithIconId(properties:NSDictionary) {

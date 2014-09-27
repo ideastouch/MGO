@@ -31,9 +31,7 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func backButtonAction(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: { () -> Void in
-            //remove video memory cache
-        })
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func logOutAction(sender: AnyObject) {

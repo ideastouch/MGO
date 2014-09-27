@@ -500,7 +500,7 @@
         <!--AV Player View Controller-->
         <scene sceneID="Khx-RW-6ri">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="PBW-fm-1op" customClass="PlayerViewController" customModule="MGO" customModuleProvider="target" sceneMemberID="viewController"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="PBW-fm-1op" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2L-nv-E3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2781" y="201"/>

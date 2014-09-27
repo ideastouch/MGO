@@ -18,12 +18,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var _passwordTextField: UITextField!
     weak var _activeTextField: UITextField!
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
@@ -34,11 +28,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidDisappear(animated)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func tapGestureRecognizerViewAction(sender: AnyObject) {
@@ -62,7 +51,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             UIView.animateWithDuration(
                 animationDuration.doubleValue,
                 delay: 0.0,
-                options: UIViewAnimationOptions.fromRaw(UInt(animationCurve.unsignedIntValue))!,  //.CurveEaseInOut,
+                options: UIViewAnimationOptions.fromRaw(UInt(animationCurve.unsignedIntValue))!,
                 animations: {
                     self._welcomeViewTopAlignment.constant = welcomeViewTopAlignmentConstant
                     self._welcomeViewCenterYAlignment.priority = 250
@@ -78,10 +67,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func keyboardWillHide(notification: NSNotification) {
+        let userInfo: Dictionary = notification.userInfo!
+        let animationCurve:NSNumber =  userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
+        let animationDuration:NSNumber =  userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
+        
         UIView.animateWithDuration(
-            1.0,//animationDuration.doubleValue,
+            animationDuration.doubleValue,
             delay: 0.0,
-            options: .CurveEaseInOut,//animationCurve.unsignedIntValue,
+            options: UIViewAnimationOptions.fromRaw(UInt(animationCurve.unsignedIntValue))!,
             animations: {
                 self._welcomeViewCenterYAlignment.priority = 750
                 self._welcomeViewTopAlignment.priority = 250

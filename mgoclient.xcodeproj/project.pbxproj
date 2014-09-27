@@ -12,7 +12,6 @@
 		C91C0D4719D59F7800BADB93 /* HLS.png in Resources */ = {isa = PBXBuildFile; fileRef = C91C0D4419D59F7800BADB93 /* HLS.png */; };
 		C91C0D4919D5A18100BADB93 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = C91C0D4819D5A18100BADB93 /* back.png */; };
 		C91C0D4B19D5A95D00BADB93 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91C0D4A19D5A95D00BADB93 /* InfoViewController.swift */; };
-		C91C0D4D19D5A9A600BADB93 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91C0D4C19D5A9A600BADB93 /* PlayerViewController.swift */; };
 		C91C0D4F19D5AA1200BADB93 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91C0D4E19D5AA1200BADB93 /* AVKit.framework */; };
 		C91C0D5319D5EAF000BADB93 /* toystory.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C91C0D5219D5EAF000BADB93 /* toystory.mp4 */; };
 		C91C0D5519D5F06300BADB93 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91C0D5419D5F06300BADB93 /* AVFoundation.framework */; };
@@ -30,7 +29,6 @@
 		C9D611B519D40C720021E89A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D611B319D40C720021E89A /* Main.storyboard */; };
 		C9D611B719D40C720021E89A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D611B619D40C720021E89A /* Images.xcassets */; };
 		C9D611BA19D40C720021E89A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D611B819D40C720021E89A /* LaunchScreen.xib */; };
-		C9D611C619D40C720021E89A /* mgoclientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D611C519D40C720021E89A /* mgoclientTests.swift */; };
 		C9D611D819D4D4760021E89A /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9D611D619D4D4760021E89A /* Readme.txt */; };
 		C9D611DB19D4D5560021E89A /* MainSceneCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D611DA19D4D5560021E89A /* MainSceneCollectionViewModel.swift */; };
 		C9D611DD19D4D8240021E89A /* MainSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D611DC19D4D8240021E89A /* MainSceneViewController.swift */; };
@@ -38,23 +36,12 @@
 		C9D611E119D4DF4A0021E89A /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D611E019D4DF4A0021E89A /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C9D611C019D40C720021E89A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9D611A219D40C720021E89A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9D611A919D40C720021E89A;
-			remoteInfo = mgoclient;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		C91C0D4219D59F7800BADB93 /* LogOut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogOut.png; sourceTree = "<group>"; };
 		C91C0D4319D59F7800BADB93 /* Video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Video.png; sourceTree = "<group>"; };
 		C91C0D4419D59F7800BADB93 /* HLS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HLS.png; sourceTree = "<group>"; };
 		C91C0D4819D5A18100BADB93 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		C91C0D4A19D5A95D00BADB93 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		C91C0D4C19D5A9A600BADB93 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		C91C0D4E19D5AA1200BADB93 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C91C0D5219D5EAF000BADB93 /* toystory.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = toystory.mp4; sourceTree = "<group>"; };
 		C91C0D5419D5F06300BADB93 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -74,7 +61,6 @@
 		C9D611B419D40C720021E89A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9D611B619D40C720021E89A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C9D611B919D40C720021E89A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C9D611BF19D40C720021E89A /* mgoclientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mgoclientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D611C419D40C720021E89A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9D611C519D40C720021E89A /* mgoclientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mgoclientTests.swift; sourceTree = "<group>"; };
 		C9D611D619D4D4760021E89A /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
@@ -92,13 +78,6 @@
 				C91C0D5519D5F06300BADB93 /* AVFoundation.framework in Frameworks */,
 				C91C0D4F19D5AA1200BADB93 /* AVKit.framework in Frameworks */,
 				C9D611E119D4DF4A0021E89A /* SpriteKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9D611BC19D40C720021E89A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				C9D611AA19D40C720021E89A /* MGO.app */,
-				C9D611BF19D40C720021E89A /* mgoclientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,7 +235,6 @@
 				C9D611B119D40C720021E89A /* LoginViewController.swift */,
 				C9D611DC19D4D8240021E89A /* MainSceneViewController.swift */,
 				C91C0D4A19D5A95D00BADB93 /* InfoViewController.swift */,
-				C91C0D4C19D5A9A600BADB93 /* PlayerViewController.swift */,
 			);
 			name = "view - controller";
 			sourceTree = "<group>";
@@ -292,24 +269,6 @@
 			productReference = C9D611AA19D40C720021E89A /* MGO.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C9D611BE19D40C720021E89A /* mgoclientTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9D611CC19D40C720021E89A /* Build configuration list for PBXNativeTarget "mgoclientTests" */;
-			buildPhases = (
-				C9D611BB19D40C720021E89A /* Sources */,
-				C9D611BC19D40C720021E89A /* Frameworks */,
-				C9D611BD19D40C720021E89A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C9D611C119D40C720021E89A /* PBXTargetDependency */,
-			);
-			name = mgoclientTests;
-			productName = mgoclientTests;
-			productReference = C9D611BF19D40C720021E89A /* mgoclientTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -321,10 +280,6 @@
 				TargetAttributes = {
 					C9D611A919D40C720021E89A = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					C9D611BE19D40C720021E89A = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = C9D611A919D40C720021E89A;
 					};
 				};
 			};
@@ -342,7 +297,6 @@
 			projectRoot = "";
 			targets = (
 				C9D611A919D40C720021E89A /* mgoclient */,
-				C9D611BE19D40C720021E89A /* mgoclientTests */,
 			);
 		};
 /* End PBXProject section */
@@ -372,13 +326,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9D611BD19D40C720021E89A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -389,7 +336,6 @@
 				C9D611DB19D4D5560021E89A /* MainSceneCollectionViewModel.swift in Sources */,
 				C9D611B219D40C720021E89A /* LoginViewController.swift in Sources */,
 				C9D611DF19D4DBB00021E89A /* MainSceneCollectionViewCell.swift in Sources */,
-				C91C0D4D19D5A9A600BADB93 /* PlayerViewController.swift in Sources */,
 				C9D611DD19D4D8240021E89A /* MainSceneViewController.swift in Sources */,
 				C91C0D6B19D60FE900BADB93 /* LoginModel.swift in Sources */,
 				C91C0D4B19D5A95D00BADB93 /* InfoViewController.swift in Sources */,
@@ -397,23 +343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9D611BB19D40C720021E89A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9D611C619D40C720021E89A /* mgoclientTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C9D611C119D40C720021E89A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9D611A919D40C720021E89A /* mgoclient */;
-			targetProxy = C9D611C019D40C720021E89A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C9D611B319D40C720021E89A /* Main.storyboard */ = {
@@ -534,40 +464,6 @@
 			};
 			name = Release;
 		};
-		C9D611CD19D40C720021E89A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = mgoclientTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mgoclient.app/mgoclient";
-			};
-			name = Debug;
-		};
-		C9D611CE19D40C720021E89A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = mgoclientTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mgoclient.app/mgoclient";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -585,15 +481,6 @@
 			buildConfigurations = (
 				C9D611CA19D40C720021E89A /* Debug */,
 				C9D611CB19D40C720021E89A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9D611CC19D40C720021E89A /* Build configuration list for PBXNativeTarget "mgoclientTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9D611CD19D40C720021E89A /* Debug */,
-				C9D611CE19D40C720021E89A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
