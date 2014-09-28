@@ -12,10 +12,10 @@ import UIKit
 
 class MainSceneViewController: UIViewController {
 
-    @IBOutlet var _mainSceneCollectionViewModel: MainSceneCollectionViewModel!
+    @IBOutlet private var _mainSceneCollectionViewModel: MainSceneCollectionViewModel!
     
-    @IBOutlet weak var _collectionView: UICollectionView!
-    @IBOutlet weak var _collectionViewFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet private weak var _collectionView: UICollectionView!
+    @IBOutlet private weak var _collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     
     

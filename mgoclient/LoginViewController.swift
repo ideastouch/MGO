@@ -11,12 +11,14 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     
-    @IBOutlet weak var _welcomeViewCenterYAlignment: NSLayoutConstraint!
-    @IBOutlet weak var _welcomeViewTopAlignment: NSLayoutConstraint!
-    @IBOutlet weak var _welcomeViewContainer: UIView!
-    @IBOutlet weak var _emailTextField: UITextField!
-    @IBOutlet weak var _passwordTextField: UITextField!
-    weak var _activeTextField: UITextField!
+    @IBOutlet private weak var _welcomeViewCenterYAlignment: NSLayoutConstraint!
+    @IBOutlet private weak var _welcomeViewTopAlignment: NSLayoutConstraint!
+    @IBOutlet private weak var _welcomeViewContainer: UIView!
+    @IBOutlet private weak var _emailTextField: UITextField!
+    @IBOutlet private weak var _passwordTextField: UITextField!
+    private weak var _activeTextField: UITextField!
+    private var _keyboardUserInfo: NSDictionary!
+    private var _deviceIsRotating: Bool = false
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -34,17 +36,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         _activeTextField?.resignFirstResponder()
     }
     
-    func keyboardWillShow(notification: NSNotification) {
-        let userInfo: Dictionary = notification.userInfo!
-        let value:NSValue = userInfo[UIKeyboardFrameEndUserInfoKey] as NSValue
+    func animateTextFieldUp(keyboardUserInfo userInfo:NSDictionary){
+        let value:NSValue = _keyboardUserInfo[UIKeyboardFrameEndUserInfoKey] as NSValue
         var keyboardRect:CGRect = value.CGRectValue()
         
         var activeTextFieldRect:CGRect = _activeTextField.frame
         activeTextFieldRect = _welcomeViewContainer.convertRect(activeTextFieldRect, toView: self.view)
         let delta:CGFloat = activeTextFieldRect.origin.y + activeTextFieldRect.size.height - keyboardRect.origin.y
         if (delta > 0) {
-            let animationCurve:NSNumber =  userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
-            let animationDuration:NSNumber =  userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
+            let animationCurve:NSNumber =  _keyboardUserInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
+            let animationDuration:NSNumber =  _keyboardUserInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
             var welcomeViewTopAlignmentConstant:CGFloat = _welcomeViewContainer.frame.origin.y - delta
             
             
@@ -57,42 +58,48 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     self._welcomeViewCenterYAlignment.priority = 250
                     self._welcomeViewTopAlignment.priority = 750
                     self.view.setNeedsLayout()
-            },
-                completion: {
-                    (value: Bool) in
-                    
-                }
+                },
+                completion: nil
             )
         }
     }
     
-    func keyboardWillHide(notification: NSNotification) {
-        let userInfo: Dictionary = notification.userInfo!
-        let animationCurve:NSNumber =  userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
-        let animationDuration:NSNumber =  userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
-        
-        UIView.animateWithDuration(
-            animationDuration.doubleValue,
-            delay: 0.0,
-            options: UIViewAnimationOptions.fromRaw(UInt(animationCurve.unsignedIntValue))!,
-            animations: {
-                self._welcomeViewCenterYAlignment.priority = 750
-                self._welcomeViewTopAlignment.priority = 250
-                self.view.setNeedsLayout()
-            },
-            completion: {
-                (value: Bool) in
-                
-            }
-        )
+    func keyboardWillShow(notification: NSNotification) {
+        if !_deviceIsRotating {
+            self._keyboardUserInfo  = notification.userInfo!
+            self.animateTextFieldUp(keyboardUserInfo: _keyboardUserInfo)
+        }
     }
     
-    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+    func keyboardWillHide(notification: NSNotification) {
+        if !_deviceIsRotating {
+            self._keyboardUserInfo = notification.userInfo!
+            let animationCurve:NSNumber =  _keyboardUserInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
+            let animationDuration:NSNumber =  _keyboardUserInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
+            
+            UIView.animateWithDuration(
+                animationDuration.doubleValue,
+                delay: 0.0,
+                options: UIViewAnimationOptions.fromRaw(UInt(animationCurve.unsignedIntValue))!,
+                animations: {
+                    self._welcomeViewCenterYAlignment.priority = 750
+                    self._welcomeViewTopAlignment.priority = 250
+                    self.view.setNeedsLayout()
+                },
+                completion:nil
+            )
+            self._keyboardUserInfo = nil
+        }
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
         _activeTextField = textField
         if (textField == _passwordTextField) {
             _passwordTextField.secureTextEntry = false
+            if _keyboardUserInfo != nil {
+                self.animateTextFieldUp(keyboardUserInfo: _keyboardUserInfo)
+            }
         }
-        return true
     }
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
@@ -100,7 +107,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if (textField == _passwordTextField) {
             _passwordTextField.secureTextEntry = true
         }
-        
         return true
     }
     
@@ -114,7 +120,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-
+    
+    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+        self._deviceIsRotating = true
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        self._deviceIsRotating = false
+    }
+    
     func loginCommunAction(valuesMatchFunc:((Void)->Void)) {
         var loginModel: LoginModel = LoginModel.sharedInstance
         loginModel._userName = _emailTextField.text

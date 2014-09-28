@@ -11,11 +11,11 @@ import Foundation
 class LoginModel {
     var _userName:String! = nil
     var _password:String! = nil
-    var _userDefults:NSMutableDictionary! = nil
+    private var _userDefults:NSMutableDictionary! = nil
     
-    class var sharedInstance : LoginModel {
+    class var sharedInstance: LoginModel {
     struct Static {
-        static let instance : LoginModel = LoginModel()
+        static let instance: LoginModel = LoginModel()
         }
         return Static.instance
     }

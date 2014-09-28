@@ -10,15 +10,19 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var _videoProperties:NSArray!
+    private lazy var _path:String = NSBundle.mainBundle().pathForResource("VideoProperties", ofType: "plist")!
+    private lazy var _videoProperties:NSArray = NSArray(contentsOfFile: self._path)
+    var videoProperties: NSArray {
+        get {
+            return _videoProperties
+        }
+    }
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        var path:String = NSBundle.mainBundle().pathForResource("VideoProperties", ofType: "plist")!
-        _videoProperties = NSArray(contentsOfFile: path)
         return true
     }
 

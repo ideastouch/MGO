@@ -30,7 +30,7 @@ class MainSceneCollectionViewModel: NSObject, UICollectionViewDelegate, UICollec
             forIndexPath: indexPath) as MainSceneCollectionViewCell
         
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        var videoProperties:NSArray = appDelegate._videoProperties
+        var videoProperties:NSArray = appDelegate.videoProperties
         var dictionary:NSDictionary = videoProperties[indexPath.row] as NSDictionary
         mainSceneCollectionViewCell._properties = dictionary
         

@@ -20,8 +20,8 @@ class InfoViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var _titleLabel: UILabel!
-    @IBOutlet weak var _descriptionTextView: UITextView!
+    @IBOutlet private weak var _titleLabel: UILabel!
+    @IBOutlet private weak var _descriptionTextView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
